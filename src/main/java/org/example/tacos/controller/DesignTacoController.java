@@ -48,6 +48,7 @@ public class DesignTacoController {
 
         List<Ingredient> ingredients = new ArrayList<>();
         ingredientRepo.findAll().forEach(ingredients::add);
+        log.info("INGREDIENTS: " + ingredients);
 
         Ingredient.Type[] types = Ingredient.Type.values();
 
@@ -59,10 +60,11 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processDesign(@Valid Taco taco, Errors errors, @ModelAttribute Order order) {
+    public String processDesign(@Valid Taco taco, Errors errors, @ModelAttribute Order order, Model model) {
 
         if (errors.hasErrors()) {
-            return "design";
+            return showDesignForm(model);
+            //redirect:/design
         }
         log.info("Processing design: " + taco);
 
