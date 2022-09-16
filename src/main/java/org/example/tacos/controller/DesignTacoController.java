@@ -24,8 +24,7 @@ import java.util.stream.Collectors;
 public class DesignTacoController {
 
     private final IngredientRepository ingredientRepo;
-
-    private TacoRepository tacoRepo;
+    private final TacoRepository tacoRepo;
 
     @Autowired
     public DesignTacoController(IngredientRepository ingredientRepo, TacoRepository tacoRepo) {

@@ -21,7 +21,7 @@ import javax.validation.Valid;
 @SessionAttributes("order")
 public class OrderController {
 
-    private OrderRepository orderRepo;
+    private final OrderRepository orderRepo;
 
     @Autowired
     public OrderController(OrderRepository orderRepo) {
