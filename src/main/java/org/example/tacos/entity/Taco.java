@@ -33,4 +33,8 @@ public class Taco {
     public void createdAt() {
         this.createdAt = new Date();
     }
+
+    public void addIngredient(Ingredient ingredient) {
+        this.ingredient.add(ingredient);
+    }
 }
