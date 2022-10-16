@@ -1,5 +1,5 @@
 create table if not exists Ingredient (
-id varchar(4) not null,
+id varchar(4) primary key,
 name varchar(25) not null,
 type varchar(10) not null
 );
@@ -10,7 +10,7 @@ name varchar(50) not null,
 created_At timestamp not null
 );
 
-create table if not exists User (
+create table if not exists Users (
 id identity,
 username varchar(50),
 password varchar(512),
