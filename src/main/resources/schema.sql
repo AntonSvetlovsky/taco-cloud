@@ -10,6 +10,18 @@ name varchar(50) not null,
 created_At timestamp not null
 );
 
+create table if not exists User (
+id identity,
+username varchar(50),
+password varchar(512),
+fullname varchar(50),
+street varchar(50),
+city varchar(50),
+state varchar(2),
+zip varchar(10),
+phone_number varchar(16)
+);
+
 create table if not exists Taco_Ingredient (
 taco_id bigint not null,
 ingredient_id varchar(4) not null
