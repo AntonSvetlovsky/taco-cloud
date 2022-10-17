@@ -12,14 +12,14 @@ created_At timestamp not null
 
 create table if not exists Users (
 id identity,
-username varchar(50),
-password varchar(512),
-fullname varchar(50),
-street varchar(50),
-city varchar(50),
-state varchar(2),
-zip varchar(10),
-phone_number varchar(16)
+username varchar(50) not null,
+password varchar(512) not null,
+fullname varchar(50) not null,
+street varchar(50) not null,
+city varchar(50) not null,
+state varchar(2) not null,
+zip varchar(10) not null,
+phone_number varchar(16) not null
 );
 
 create table if not exists Taco_Ingredient (
