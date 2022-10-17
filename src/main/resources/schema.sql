@@ -6,17 +6,17 @@ type varchar(10) not null
 
 create table if not exists Taco (
 id identity,
-name varchar(50) not null,
+name varchar(16) not null,
 created_At timestamp not null
 );
 
 create table if not exists Users (
 id identity,
-username varchar(50) not null,
-password varchar(512) not null,
-fullname varchar(50) not null,
-street varchar(50) not null,
-city varchar(50) not null,
+username varchar(32) not null,
+password varchar(64) not null,
+fullname varchar(32) not null,
+street varchar(32) not null,
+city varchar(32) not null,
 state varchar(2) not null,
 zip varchar(10) not null,
 phone_number varchar(16) not null
@@ -34,9 +34,9 @@ alter table Taco_Ingredient
 
 create table if not exists Taco_Order (
 id identity,
-delivery_Name varchar(50) not null,
-delivery_Street varchar(50) not null,
-delivery_City varchar(50) not null,
+delivery_Name varchar(32) not null,
+delivery_Street varchar(32) not null,
+delivery_City varchar(32) not null,
 delivery_State varchar(2) not null,
 delivery_Zip varchar(10) not null,
 cc_Number varchar(16) not null,

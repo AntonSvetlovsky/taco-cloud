@@ -21,7 +21,8 @@ public class Taco {
     private Date createdAt;
 
     @NotNull
-    @Size(min = 5, message="Name must be at least 5 characters long")
+    @Size(min = 4, message="Name must be at least 4 characters long")
+    @Size(max = 16, message="Name must be 16 characters long max")
     private String name;
 
     @ManyToMany(targetEntity = Ingredient.class)

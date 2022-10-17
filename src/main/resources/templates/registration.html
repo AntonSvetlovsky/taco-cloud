@@ -28,6 +28,10 @@
           th:if="${#fields.hasErrors('confirm')}"
           th:errors="*{confirm}">Password is required</span>
     <br/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('global')}"
+          th:each="err : ${#fields.errors('global')}" th:text="${err}">Global password errors</span>
+    <br/>
 
     <label for="fullname">Full name: </label>
     <input type="text" th:field="*{fullname}"/>
