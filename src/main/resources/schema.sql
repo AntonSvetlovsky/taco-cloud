@@ -42,7 +42,8 @@ delivery_Zip varchar(10) not null,
 cc_Number varchar(16) not null,
 cc_Expiration varchar(5) not null,
 cc_CVV varchar(3) not null,
-placed_At timestamp not null
+placed_At timestamp not null,
+user_id bigint not null
 );
 
 create table if not exists Taco_Order_Tacos (
